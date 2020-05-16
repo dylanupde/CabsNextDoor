@@ -48,6 +48,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraScripts\SmartCamera.cs" />
+     <Compile Include="Assets\PassengerPickup.cs" />
+     <Compile Include="Assets\spin.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.0a10/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
