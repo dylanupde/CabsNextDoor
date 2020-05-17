@@ -15,9 +15,9 @@ public class VehicleControllerV3 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (playerInput.)
-        {
+        //if (playerInput.)
+        //{
 
-        }
+        //}
     }
 }
