@@ -999,18 +999,18 @@ MonoBehaviour:
       m_ExpandedIDs: 5efbffffd4370000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: PretendTaxi1
+        m_OriginalName: PretendTaxi1
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -1370
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -1174,13 +1174,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/PlaceHolderObjects/SeeThrough
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/PlaceHolderObjects/SeeThrough
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Dylan\Documents\CabsNextDoor\OneStarTaxiInc
   m_LockTracker:
