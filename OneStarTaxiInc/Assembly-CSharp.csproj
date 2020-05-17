@@ -53,11 +53,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraScripts\SmartCamera.cs" />
-    <Compile Include="Assets\PassengerPickup.cs" />
-    <Compile Include="Assets\spin.cs" />
+    <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\PlaceHolderObjects\Passenger\PassengerPickup.cs" />
+    <Compile Include="Assets\PlaceHolderObjects\Passenger\spin.cs" />
+    <Compile Include="Assets\PlaceHolderObjects\SeeThrough\LayerMasking.cs" />
+    <Compile Include="Assets\PlayerInput.cs" />
+    <Compile Include="Assets\VehicleController.cs" />
+    <Compile Include="Assets\VehicleControllerV2.cs" />
+    <Compile Include="Assets\VehicleControllerV3.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\PlaceHolderObjects\TestStuff\TestShader.shader" />
+     <None Include="Assets\PlaceHolderObjects\SeeThrough\SeeThroughWall.shader" />
+     <None Include="Assets\PlaceHolderObjects\SeeThrough\SeeThroughTaxi.shader" />
+     <None Include="Assets\DOTween\DOTween.dll" />
+     <None Include="Assets\DOTween\readme.txt" />
      <None Include="Assets\PolygonCity\Change_Log.txt" />
+     <None Include="Assets\DOTween\DOTween.XML" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.0a10\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -246,6 +264,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.0a10\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.0a10\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
