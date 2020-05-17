@@ -77,6 +77,8 @@ public class PlayerInput : MonoBehaviour
             {
                 currentFacingVector = -rightMovementVector;
             }
+
+            Debug.Log("Button pressed");
         }
         else if (rightIsPressed)
         {
@@ -92,6 +94,8 @@ public class PlayerInput : MonoBehaviour
             {
                 currentFacingVector = rightMovementVector;
             }
+
+            Debug.Log("Button pressed");
         }
         else if (upIsPressed)
         {

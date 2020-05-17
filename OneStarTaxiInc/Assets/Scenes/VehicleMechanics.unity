@@ -2063,6 +2063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbbe528e6273bd40823fc50752cad94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  acceleration: 50
+  brakeForce: 50
 --- !u!114 &1261191678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,9 +2082,7 @@ MonoBehaviour:
   downIsPressed: 0
   leftIsPressed: 0
   rightIsPressed: 0
-  jumpIsPressed: 0
-  attackIsPressed: 0
-  isRunning: 0
+  boostIsPressed: 0
   moveButtonIsPressed: 0
   isPlayer2: 0
 --- !u!1 &1328452684
@@ -3161,7 +3161,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531290061910438949}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 44dfec2940173dd4e8c5f9792fc9e009, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3361,7 +3361,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2832915928226765283}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 44dfec2940173dd4e8c5f9792fc9e009, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3565,7 +3565,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5283086863981038512}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 44dfec2940173dd4e8c5f9792fc9e009, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3921,7 +3921,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8717912894812554804}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 44dfec2940173dd4e8c5f9792fc9e009, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
