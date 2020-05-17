@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     [HideInInspector] public Vector3 currentFacingVector;
-    [HideInInspector] public bool upIsPressed, downIsPressed, leftIsPressed, rightIsPressed, jumpIsPressed, attackIsPressed, isRunning, moveButtonIsPressed;
+    [HideInInspector] public bool upIsPressed, downIsPressed, leftIsPressed, rightIsPressed, boostIsPressed, moveButtonIsPressed;
 
     public bool isPlayer2 = false;
 
@@ -57,14 +57,12 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKey(rightButton)) rightIsPressed = true;
         if (Input.GetKey(upButton)) upIsPressed = true;
         if (Input.GetKey(downButton)) downIsPressed = true;
-        if (Input.GetKey(attackButton)) attackIsPressed = true;
+        if (Input.GetKey(attackButton)) boostIsPressed = true;
     }
 
 
     public void GetCurrentFacingDirection()
     {
-        isRunning = true;
-
         if (leftIsPressed)
         {
             if (upIsPressed)
@@ -103,10 +101,6 @@ public class PlayerInput : MonoBehaviour
         {
             currentFacingVector = -upMovementVector;
         }
-        else
-        {
-            isRunning = false;
-        }
 
         moveButtonIsPressed = upIsPressed || downIsPressed || leftIsPressed || rightIsPressed;
         currentFacingVector = currentFacingVector.normalized;
@@ -119,7 +113,7 @@ public class PlayerInput : MonoBehaviour
         rightIsPressed = false;
         upIsPressed = false;
         downIsPressed = false;
-        jumpIsPressed = false;
-        attackIsPressed = false;
+        boostIsPressed = false;
+        moveButtonIsPressed = false;
     }
 }
