@@ -7,25 +7,31 @@ using UnityEngine;
 
 public class VehicleController : MonoBehaviour
 {
+    [SerializeField] Transform centerOfMassTransform;
     [SerializeField] WheelCollider frontLWheelColl, frontRWheelColl, rearLWheelColl, rearRWheelColl;
     [SerializeField] Transform frontLWheelModelTransform, frontRWheelModelTransform, rearLWheelModelTransform, rearRWheelModelTransform;
+    [SerializeField] float downForce = 5f;
     [SerializeField] float motorForce = 50f;
     [SerializeField] float maxSteeringAngle = 30f;
     [SerializeField] bool isPlayer1;
 
     float horizontalInput;
-    float verticalInput;
+    [SerializeField] float verticalInput;
     float steeringAngle;
+    Rigidbody rigidBody;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        rigidBody = GetComponent<Rigidbody>();
+        rigidBody.centerOfMass = centerOfMassTransform.localPosition;
     }
 
 
     void FixedUpdate()
     {
+        rigidBody.AddForce(Vector3.down * downForce);
+
         GetInput();
         Steer();
         Accelerate();

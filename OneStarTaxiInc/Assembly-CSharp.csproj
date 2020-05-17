@@ -49,7 +49,10 @@
   <ItemGroup>
      <Compile Include="Assets\CameraScripts\SmartCamera.cs" />
      <Compile Include="Assets\PassengerPickup.cs" />
+     <Compile Include="Assets\PlayerInput.cs" />
      <Compile Include="Assets\VehicleController.cs" />
+     <Compile Include="Assets\VehicleControllerV2.cs" />
+     <Compile Include="Assets\VehicleControllerV3.cs" />
      <Compile Include="Assets\spin.cs" />
      <None Include="Assets\PolygonCity\Change_Log.txt" />
  <Reference Include="UnityEngine">
