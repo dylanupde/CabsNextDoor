@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/seethroughwalltesting.unity
+- path: Assets/Scenes/VehicleMechanics.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
