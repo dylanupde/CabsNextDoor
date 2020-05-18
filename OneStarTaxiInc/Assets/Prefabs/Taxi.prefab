@@ -96,6 +96,36 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.12514266
   m_Center: {x: 0.0000000055879354, y: 7.940934e-23, z: 0.000000007450579}
+--- !u!1 &2803259675859192639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2396393281859628843}
+  m_Layer: 0
+  m_Name: PassengerLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2396393281859628843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803259675859192639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3347170504021143597}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2966760176686319091
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +264,7 @@ GameObject:
   - component: {fileID: 3347170504021143594}
   - component: {fileID: 3347170504021143592}
   - component: {fileID: 3347170504021143595}
+  - component: {fileID: 3366203143526101568}
   m_Layer: 0
   m_Name: Taxi
   m_TagString: Untagged
@@ -258,6 +289,7 @@ Transform:
   - {fileID: 6314510811202684075}
   - {fileID: 6642219251045548273}
   - {fileID: 3347170503654955473}
+  - {fileID: 2396393281859628843}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -309,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbbe528e6273bd40823fc50752cad94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  passengerLocation: {fileID: 2396393281859628843}
   wheelColls:
   - {fileID: 7431716007874099815}
   - {fileID: 6237404395125716963}
@@ -329,6 +362,20 @@ MonoBehaviour:
   buttBoostUpForce: 50000
   buttBoostTorque: 50000
   buttBoostCooldownTime: 3
+  currentPassengerTransform: {fileID: 0}
+--- !u!114 &3366203143526101568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347170504021143596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321af8076c444e2449d0ea9a8c3d69cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minImpulseToSteal: 1000
 --- !u!1 &6237404395125716962
 GameObject:
   m_ObjectHideFlags: 0

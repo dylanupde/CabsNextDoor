@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class VehicleControllerV3 : MonoBehaviour
 {
+    [Tooltip("Don't fuck with dis. It's where the passenger will sit")]
+    public Transform passengerLocation;
     [Tooltip("Don't fuck with dis. It's all the wheel colliders")]
     [SerializeField] SphereCollider[] wheelColls;
     [Tooltip("Don't fuck with dis. I use it to set the rigidbody's center of mass wherever it is")]
@@ -36,6 +38,8 @@ public class VehicleControllerV3 : MonoBehaviour
     [SerializeField] float buttBoostTorque = 500f;
     [Tooltip("How long after butt boosting we can butt boost again")]
     [SerializeField] float buttBoostCooldownTime = 3f;
+
+    [HideInInspector] public Transform currentPassengerTransform;
 
     Rigidbody rigidBody;
     MeshRenderer bodyMeshRenderer;
@@ -71,7 +75,6 @@ public class VehicleControllerV3 : MonoBehaviour
 
         if (frameCount < flashTime && !boostAllowed)
         {
-            Debug.Log("FLASH");
             bodyMeshRenderer.material = dullMaterial;
         }
         else
