@@ -170,7 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 588524688}
-  - {fileID: 1422456931}
   offset: {x: -34, y: 25.2, z: -34}
   smoothTime: 0.5
 --- !u!81 &46906158
@@ -273,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2594407196972277414, guid: a1887351dccd58c40a1064ae1d9edb4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.17
+      value: 5.13
       objectReference: {fileID: 0}
     - target: {fileID: 2594407196972277414, guid: a1887351dccd58c40a1064ae1d9edb4e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -606,11 +605,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}
---- !u!4 &1422456931 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9135848525625984202, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}
-  m_PrefabInstance: {fileID: 1422456930}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1447966914
 GameObject:
   m_ObjectHideFlags: 0
