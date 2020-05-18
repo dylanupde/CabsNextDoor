@@ -60,6 +60,7 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\HydrantSquirter.cs" />
     <Compile Include="Assets\PlaceHolderObjects\Passenger\PassengerPickup.cs" />
     <Compile Include="Assets\PlaceHolderObjects\Passenger\spin.cs" />
     <Compile Include="Assets\PlaceHolderObjects\SeeThrough\LayerMasking.cs" />
