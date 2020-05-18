@@ -11,11 +11,13 @@ public class PlayerInput : MonoBehaviour
     public bool isPlayer2 = false;
 
     Transform cameraTransform;
+    GameManager gameManager;
     Vector3 rightMovementVector, upMovementVector;
     KeyCode leftButton, rightButton, upButton, downButton, boostButton;
 
     void Start()
     {
+        gameManager = GameManager.Instance;
         cameraTransform = Camera.main.transform;
 
         rightMovementVector = cameraTransform.right.normalized;
@@ -46,6 +48,8 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameManager.gameHasStarted) return;
+
         GetPlayerInput();
     }
 

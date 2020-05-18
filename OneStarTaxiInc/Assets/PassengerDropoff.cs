@@ -14,6 +14,8 @@ public class PassengerDropoff : MonoBehaviour
     void Start()
     {
         meshCollider = GetComponent<MeshCollider>();
+        GameManager.Instance.dropoffs.Add(this);
+        gameObject.SetActive(false);
     }
 
     void OnTriggerStay(Collider other)
@@ -28,14 +30,22 @@ public class PassengerDropoff : MonoBehaviour
 
         if (otherVehicleController && otherVehicleController.currentPassengerTransform != null)
         {
-            Debug.Log("literally triggered");
             if (other.attachedRigidbody.velocity.magnitude <= maxSpeedForDropoff)
             {
                 Transform theirPassenger = otherVehicleController.currentPassengerTransform;
                 otherVehicleController.currentPassengerTransform.parent = null;
+                otherVehicleController.currentPassengerTransform = null;
                 meshCollider.enabled = false;
-                Debug.Log("here", theirPassenger.gameObject);
-                Debug.Log("and here", transform.gameObject);
+
+                if (otherVehicleController.GetComponent<PlayerInput>().isPlayer2)
+                {
+                    GameManager.Instance.AddToScore(false);
+                }
+                else
+                {
+                    GameManager.Instance.AddToScore(true);
+                }
+
                 StartCoroutine(MovePassengerToDropoffPointCoroutine(transform, theirPassenger));
             }
         }
@@ -56,5 +66,6 @@ public class PassengerDropoff : MonoBehaviour
         }
 
         inputPassengerTransform.position = inputTargetTransform.position;
+        gameObject.SetActive(false);
     }
 }
