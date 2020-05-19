@@ -8,16 +8,20 @@ public class PassengerCollider : MonoBehaviour
     [SerializeField] float maxSpeedForPickup = 0.2f;
 
     MeshCollider meshCollider;
+    MeshRenderer meshRenderer;
 
     void Awake()
     {
-        myDropoff.myPassengerCollider = this;
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
         meshCollider = GetComponent<MeshCollider>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        GameManager.Instance.pickups.Add(this);
+        transform.parent.gameObject.SetActive(false);
     }
 
     void OnTriggerStay(Collider other)
@@ -34,6 +38,7 @@ public class PassengerCollider : MonoBehaviour
         {
             if (other.attachedRigidbody.velocity.magnitude <= maxSpeedForPickup)
             {
+                meshRenderer.enabled = false;
                 transform.parent.parent = other.attachedRigidbody.transform;
                 meshCollider.enabled = false;
                 otherVehicleController.currentPassengerTransform = transform.parent;
