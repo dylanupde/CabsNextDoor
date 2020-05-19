@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 588524688}
+  - {fileID: 440470863}
   offset: {x: -34, y: 25.2, z: -34}
   smoothTime: 0.5
 --- !u!81 &46906158
@@ -223,6 +224,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!4 &440470863 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9135848525625984202, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}
+  m_PrefabInstance: {fileID: 1422456930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &588524687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,7 +266,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2594407196972277410, guid: a1887351dccd58c40a1064ae1d9edb4e, type: 3}
       propertyPath: m_TagString
-      value: spheremask
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594407196972277413, guid: a1887351dccd58c40a1064ae1d9edb4e, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594407196972277413, guid: a1887351dccd58c40a1064ae1d9edb4e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2594407196972277414, guid: a1887351dccd58c40a1064ae1d9edb4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,6 +565,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 46906155}
+    - target: {fileID: 5915582704395488968, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}
+      propertyPath: m_TagString
+      value: spheremask
+      objectReference: {fileID: 0}
     - target: {fileID: 9135848525625984202, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.96
@@ -602,6 +620,10 @@ PrefabInstance:
     - target: {fileID: 9135848525625985846, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135848525625985846, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dcace0fb83febe41831a3d9be4e076f, type: 3}

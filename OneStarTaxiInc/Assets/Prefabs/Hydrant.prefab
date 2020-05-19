@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squirtParticles: {fileID: 2599363134072607152}
-  squirtForce: 400
+  squirtForce: 200
 --- !u!1 &8627319251817487672
 GameObject:
   m_ObjectHideFlags: 0
