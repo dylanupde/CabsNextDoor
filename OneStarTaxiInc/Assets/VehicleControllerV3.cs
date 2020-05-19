@@ -38,6 +38,8 @@ public class VehicleControllerV3 : MonoBehaviour
     [SerializeField] float buttBoostTorque = 500f;
     [Tooltip("How long after butt boosting we can butt boost again")]
     [SerializeField] float buttBoostCooldownTime = 3f;
+    [Tooltip("MidairAcceleration")]
+    [SerializeField] float midairAcceleration = 3f;
 
     [HideInInspector] public Transform currentPassengerTransform;
 
@@ -87,32 +89,32 @@ public class VehicleControllerV3 : MonoBehaviour
         playerInput.GetCurrentFacingDirection();
         float numOfWheelsOnTheGround = HowManyWheelsAreOnTheGround();
 
-        if (numOfWheelsOnTheGround >= 2)
+        float currentAcceleration = acceleration;
+        if (numOfWheelsOnTheGround < 2) currentAcceleration = midairAcceleration;
+        
+        if (playerInput.moveButtonIsPressed)
         {
-            if (playerInput.moveButtonIsPressed)
+            SetAllWheelsToPhysMat(zeroFrictionMaterial);
+
+            Vector2 flattenedVelocityVector = new Vector2(rigidBody.velocity.x, rigidBody.velocity.z);
+            if (flattenedVelocityVector.magnitude <= maxSpeed)
             {
-                SetAllWheelsToPhysMat(zeroFrictionMaterial);
 
-                Vector2 flattenedVelocityVector = new Vector2(rigidBody.velocity.x, rigidBody.velocity.z);
-                if (flattenedVelocityVector.magnitude <= maxSpeed)
+                RaycastHit raycastHit;
+                if (Physics.Raycast(transform.position, -transform.up, out raycastHit, groundTestDist))
                 {
-
-                    RaycastHit raycastHit;
-                    if (Physics.Raycast(transform.position, -transform.up, out raycastHit, groundTestDist))
-                    {
-                        Vector3 desiredMoveVector = (Vector3.ProjectOnPlane(playerInput.currentFacingVector, raycastHit.normal)).normalized;
-                        rigidBody.AddForce(desiredMoveVector * acceleration);
-                    }
-                    else
-                    {
-                        rigidBody.AddForce(playerInput.currentFacingVector * acceleration);
-                    }
+                    Vector3 desiredMoveVector = (Vector3.ProjectOnPlane(playerInput.currentFacingVector, raycastHit.normal)).normalized;
+                    rigidBody.AddForce(desiredMoveVector * currentAcceleration);
+                }
+                else
+                {
+                    rigidBody.AddForce(playerInput.currentFacingVector * currentAcceleration);
                 }
             }
-            else
-            {
-                SetAllWheelsToPhysMat(highFrictionMaterial);
-            }
+        }
+        else
+        {
+            SetAllWheelsToPhysMat(highFrictionMaterial);
         }
 
         if (numOfWheelsOnTheGround >= 3) RotateToVelocityDirection();
